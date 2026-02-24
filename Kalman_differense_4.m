@@ -1,4 +1,4 @@
-%% Очистка рабочего пространства
+% Очистка рабочего пространства
 clear; clc; close all;
 
 %% Параметры дискретизации
@@ -337,4 +337,5 @@ function [filtered, R_hist] = filter_adaptive(signal, F, H, Q, x0, P0, R_init)
         P(:,:,k) = (eye(2) - K * H) * P_pred;
         filtered(k) = x(1,k);
     end
+
 end
